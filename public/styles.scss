@@ -1,0 +1,165 @@
+$bg-color1:#CBF1F5;
+$bg-color2:  #A6E3E9;
+
+@mixin position {
+    position:relative;
+    top: 200px;
+}
+
+@mixin square {
+    height: 130px;
+    width: 130px;
+    margin-top: 10px;
+    position: absolute;
+    right: 15px;
+    box-shadow: 5px 3px 5px rgb(214, 213, 213) ;
+    border-radius: 5%;
+}
+
+@mixin margin {
+    margin-left: 210px;
+    margin-right: 210px;
+}
+
+@mixin fade {
+    -webkit-animation:  fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation:  fadein 2s; /* Firefox < 16 */
+     -ms-animation:  fadein 2s; /* Internet Explorer */
+      -o-animation:  fadein 2s; /* Opera < 12.1 */
+         animation:  fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+   }
+   
+   /* Firefox < 16 */
+   @-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+   }
+   
+   /* Safari, Chrome and Opera > 12.1 */
+   @-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+   }
+   
+   /* Internet Explorer */
+   @-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+   }
+   
+
+.header{
+    @include fade;
+    background-color: $bg-color1;
+    padding: 10px 0 250px 10px;
+    width: 100%;
+    border-radius: 0 0 10% 10%;
+}
+header{
+    font-weight: 900;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+nav{
+    @include margin;
+    background-color: $bg-color1;
+}
+body{
+    margin: 0;
+    font-family:sans-serif;
+}
+h1{
+    font-weight: 100;
+    position: relative;
+    top: 100px;
+    
+}
+.complain{
+    @include position;
+}
+.trolley{
+    @include position;
+    left: 650px;
+    width: 250px;
+    height: 250px;
+}
+hr{
+    margin: 70px 0 50px 0;
+    border-top: 3px dotted ;
+    color:grey;
+    height: 2px;
+}
+.about{
+    @include margin;
+}
+.headcontact{
+    @include margin;
+    position: absolute;
+    top: 150px;
+    left: 60px;
+}
+.contact{
+    @include margin;
+    text-align: center;
+    padding: 70px 0 0 0;
+}
+.title{
+    padding:0 0 30px 0;
+}
+.square{
+    @include square;
+    background-color: $bg-color1;
+}
+.square:hover{
+    @include square;
+    background-color:$bg-color2;
+}
+.bread, .burger, .coffee, .healthy, .icecream, .milk {
+    height: 100px;
+    width: 100px; 
+    position:absolute;
+    top: 15px;
+    left: 15px;
+}
+.middle{
+    margin: 210px 0 30px 0;
+}
+.default{
+    background-color: $bg-color1;
+}
+.default:hover{
+    background-color:$bg-color2;
+}
+table{
+    padding: 50px 5px 0 100px;
+}
+.card{
+    margin-left:220px;
+    background-color: $bg-color1;
+    box-shadow: 6px 5px 6px rgb(214, 213, 213) ;
+}
+.col-title{
+   margin: 0 0 0 25%; 
+}
+.col-text{
+    margin: 15% 0 0 0;
+}
+.col-middle{
+    margin: 10% 0 0 4%;
+}
+.col-btn{
+    margin: 5% 70% 0 0;
+    background-color: $bg-color2;
+}
+footer{
+    @include fade;
+    margin-top: 100px;
+    padding: 100px 0 100px 0;
+    background-color: $bg-color1;
+    border-radius: 10% 10% 0 0;
+}
+
